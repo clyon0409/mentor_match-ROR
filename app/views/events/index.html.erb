@@ -1,0 +1,30 @@
+<h1>Welcome to the Events Dashboard</h1>
+
+<table class="table table-striped">
+  <thead>
+  	<tr>
+  		<th>Name</th>
+  		<th>Description</th>
+  		<th>Date</th>
+  		<th>Start Time</th>
+  		<th>End Time</th>
+  		<th>Location</th>
+  		<th>Action</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<% for event in @events %>
+  		<tr>
+  			<td><%= event.name %></td>
+  			<td><%= event.description %></td>
+  			<td><%= event.date.strftime("%A, %d %b %Y") %></td>
+  			<td><%= event.start.strftime("%l:%M %p") %></td>
+  			<td><%= event.end.strftime("%l:%M %p") %></td>
+  			<td><%= event.location %></td>
+  			<td></td>
+  		</tr>
+  	<% end %>
+  </tbody>
+</table>
+
+<%= link_to('Add a event', controller: 'events',action:'new') %>

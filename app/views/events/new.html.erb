@@ -1,0 +1,32 @@
+
+<div class="container-fluid">
+	<h1>Add an event</h1>
+	<form action='/events' method='post'>
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  		<div class="form-group">
+    		<label>Name</label>
+    		<input type="text" class="form-control" id="eventName" placeholder="Enter name of event" name='event[name]'>
+  		</div>
+  		<div class="form-group">
+    		<label>Description</label>
+    		<input type="text" class="form-control" id="eventDescription" placeholder="Enter a short description of the event" name='event[description]'>
+  		</div>
+  		<div class="form-group">
+    		<label>Date</label>
+    		<input type="date" class="form-control" id="eventName" placeholder="Enter name of event" name='event[date]'>
+  		</div>
+  		<div class="form-group">
+    		<label>Start Time</label>
+    		<input type="time" class="form-control" id="eventName" name='event[start]'>
+  		</div>
+  		<div class="form-group">
+    		<label>End Time</label>
+    		<input type="time" class="form-control" id="eventName" name='event[end]'>
+  		</div>
+  		<div class="form-group">
+    		<label>Location</label>
+    		<input type="text" class="form-control" id="eventName" placeholder="Enter location of event" name='event[location]'>
+  		</div>
+  		<button type="submit" class="btn btn-default btn-primary">Submit</button>
+	</form>
+</div>
